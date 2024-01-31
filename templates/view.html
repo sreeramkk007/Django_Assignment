@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            font-size: large;
+            margin-top: 50px;
+            margin-left: 100px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Password</th>
+            <th>Gender</th>
+        </tr>
+        {% for i in cr %}
+        <tr>
+            <td>{{i.firstname}}</td>
+            <td>{{i.lastname}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.password}}</td>
+            <td>{{i.gender}}</td>
+            <td><button ><a href="{% url 'detailview' i.id %}">VIEW</a></button></td>
+            <td><button ><a href="{% url 'update' i.id %}">UPDATE</a></button></td>
+            <td><button ><a href="{% url 'delete' i.id %}">DELETE</a></button></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

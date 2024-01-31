@@ -1,0 +1,8 @@
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form.as_p}}
+        <center><button type=" submit">ADD</button></center>
+        <a href="{% url 'view' %}">BACK</a>
+    </form>
+</body>

@@ -1,0 +1,17 @@
+<body>
+    <form action="/alogin/" method="POST">
+        {%csrf_token%}
+        <h1>Admin Login</h1>
+        <div>
+            <p>Username</p>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <p>Password</p>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</body>
